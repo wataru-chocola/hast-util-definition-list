@@ -1,0 +1,22 @@
+import { expect, test } from "vitest";
+import { definitionListHastToMdast } from "./index.js";
+
+import { fromHtml as hastFromHtml } from "hast-util-from-html";
+import { toMarkdown as mdastToMarkdown } from "mdast-util-to-markdown";
+import { toMdast as hastToMdast } from "hast-util-to-mdast";
+import { defListToMarkdown } from "mdast-util-definition-list";
+
+test("Basic conversion", () => {
+  const html = `<dl><dt>First Term</dt><dd>This is the <strong>definition</strong> of the first term.</dd><dd>This is another definition of the first term.</dd><dt>Second Term</dt><dd>This is one definition of the second term.</dd><dd>This is another definition of the second term.</dd></dl>`;
+
+  const hast = hastFromHtml(html);
+  const mdast = hastToMdast(hast, {
+    handlers: {
+      ...definitionListHastToMdast,
+    },
+  });
+  const md = mdastToMarkdown(mdast, {
+    extensions: [defListToMarkdown],
+  });
+  expect(md).toBe("");
+});

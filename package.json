@@ -7,7 +7,8 @@
     "format": "prettier --write \"./**/*.{ts,json}\"",
     "lint": "eslint ./**/*.ts",
     "lint-fix": "eslint --fix ./**/*.ts && prettier --write ./**/*.{ts,json}",
-    "test": "npm run clean && vitest",
+    "test": "vitest run .js",
+    "test:dev": "npm run clean && vitest",
     "build": "npm run clean && tsc",
     "prepack": "npm run build",
     "clean": "rimraf index*.js index*.d.ts"

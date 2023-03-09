@@ -7,8 +7,7 @@
     "format": "prettier --write \"./**/*.{ts,json}\"",
     "lint": "eslint ./**/*.ts",
     "lint-fix": "eslint --fix ./**/*.ts && prettier --write ./**/*.{ts,json}",
-    "typecheck": "tsc",
-    "test": "vitest",
+    "test": "npm run clean && vitest",
     "build": "npm run clean && tsc",
     "prepack": "npm run build",
     "clean": "rimraf index*.js index*.d.ts"
@@ -31,7 +30,6 @@
   "devDependencies": {
     "eslint": "^8.35.0",
     "hast-util-from-html": "^1.0.1",
-    "mdast-util-definition-list": "^1.3.0",
     "mdast-util-to-markdown": "^1.5.0",
     "prettier": "^2.8.4",
     "rimraf": "^4.3.1",
@@ -40,6 +38,16 @@
     "vitest": "^0.29.2"
   },
   "dependencies": {
-    "hast-util-to-mdast": "^9.0.0"
+    "@types/hast": "^2.3.4",
+    "@types/mdast": "^3.0.10",
+    "@types/unist": "^2.0.6",
+    "hast-util-phrasing": "^2.0.2",
+    "hast-util-to-mdast": "^9.0.0",
+    "mdast-util-definition-list": "^1.3.1"
+  },
+  "overrides": {
+    "hast-util-to-html": {
+      "hast-util-raw": "^8.0.0"
+    }
   }
 }

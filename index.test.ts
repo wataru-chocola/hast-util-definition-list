@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { definitionListHastToMdast, dl } from "./index.js";
+import { definitionListHastToMdast } from "./index.js";
 
 import { fromHtml as hastFromHtml } from "hast-util-from-html";
 import { toMarkdown as mdastToMarkdown } from "mdast-util-to-markdown";

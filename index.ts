@@ -87,10 +87,10 @@ function spreadout(element: Element) {
   return false;
 }
 
-const definitionListHastToMdast = {
+const defListHastToMdast = {
   dl,
   dt,
   dd,
 };
 
-export { definitionListHastToMdast };
+export { defListHastToMdast };

@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { definitionListHastToMdast } from "./index.js";
+import { defListHastToMdast } from "./index.js";
 
 import { fromHtml as hastFromHtml } from "hast-util-from-html";
 import { toMarkdown as mdastToMarkdown } from "mdast-util-to-markdown";
@@ -325,7 +325,7 @@ test.each([
   const hast = hastFromHtml(dedent(html), { fragment: true });
   const mdast = hastToMdast(hast, {
     handlers: {
-      ...definitionListHastToMdast,
+      ...defListHastToMdast,
     },
   });
   const md = mdastToMarkdown(mdast, {

@@ -11,14 +11,14 @@ import type {
   DefListDescriptionNode,
   DefListTermNode,
 } from "mdast-util-definition-list";
-import { phrasing } from "hast-util-phrasing";
+import { phrasing } from "mdast-util-phrasing";
 
 /**
  * dl element handler
  *
  * @public
  */
-export const dl: Handle = (state, element, parent) => {
+export const dl: Handle = (state, element, _parent) => {
   // unwrap div
   // see: https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/dl.js
   const children = element.children.reduce((acc, child) => {

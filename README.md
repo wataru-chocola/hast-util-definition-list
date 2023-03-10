@@ -23,7 +23,7 @@ $ npm install hast-util-definition-list
 
 Export [hast-util-to-mdast]'s handler (`Handle`) and handlers (`Record<string, Handle>`).
 
- * `definitionListHastToMdast` (type: `Record<"dl"|"dt"|"dd", Handle>`)
+ * `defListHastToMdast` (type: `Record<"dl"|"dt"|"dd", Handle>`)
  * `dl` (type: `Handle`)
  * `dt` (type: `Handle`)
  * `dd` (type: `Handle`)
@@ -31,7 +31,7 @@ Export [hast-util-to-mdast]'s handler (`Handle`) and handlers (`Record<string, H
 ## Use
 
 ```typescript
-import { definitionListHastToMdast } from "hast-util-definition-list";
+import { defListHastToMdast } from "hast-util-definition-list";
 
 import { fromHtml as hastFromHtml } from "hast-util-from-html";
 import { toMarkdown as mdastToMarkdown } from "mdast-util-to-markdown";
@@ -52,7 +52,7 @@ const html = `
 const hast = hastFromHtml(html, { fragment: true });
 const mdast = hastToMdast(hast, {
   handlers: {
-    ...definitionListHastToMdast,
+    ...defListHastToMdast,
   },
 });
 const md = mdastToMarkdown(mdast, {

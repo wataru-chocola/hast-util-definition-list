@@ -1,6 +1,6 @@
 {
   "name": "hast-util-definition-list",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "hast-util-to-mdast handlers for definition list",
   "license": "MIT",
   "author": "Wataru Watanabe",

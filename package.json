@@ -34,7 +34,7 @@
     "mdast-util-phrasing": "^3.0.1"
   },
   "devDependencies": {
-    "eslint": "8.40.0",
+    "eslint": "8.41.0",
     "hast-util-from-html": "1.0.2",
     "mdast-util-to-markdown": "1.5.0",
     "prettier": "2.8.8",

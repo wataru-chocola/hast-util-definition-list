@@ -41,7 +41,7 @@
     "rimraf": "4.4.1",
     "ts-dedent": "2.2.0",
     "typescript": "5.0.4",
-    "vitest": "0.31.4"
+    "vitest": "0.34.4"
   },
   "overrides": {
     "hast-util-to-html": {

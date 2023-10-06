@@ -29,7 +29,7 @@
   "dependencies": {
     "@types/hast": "^2.3.4",
     "@types/mdast": "^3.0.10",
-    "@types/unist": "^2.0.6",
+    "@types/unist": "^3.0.0",
     "hast-util-to-mdast": "^9.0.0",
     "mdast-util-definition-list": "^1.4.0",
     "mdast-util-phrasing": "^3.0.1"

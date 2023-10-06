@@ -32,7 +32,7 @@
     "@types/unist": "^2.0.6",
     "hast-util-to-mdast": "^9.0.0",
     "mdast-util-definition-list": "^1.4.0",
-    "mdast-util-phrasing": "^3.0.1"
+    "mdast-util-phrasing": "^4.0.0"
   },
   "devDependencies": {
     "eslint": "8.49.0",

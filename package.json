@@ -46,7 +46,7 @@
   },
   "overrides": {
     "hast-util-to-html": {
-      "hast-util-raw": "^8.0.0"
+      "hast-util-raw": "^9.0.0"
     }
   },
   "scripts": {

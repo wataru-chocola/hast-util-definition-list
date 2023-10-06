@@ -9,8 +9,8 @@ dependencies:
     specifier: ^2.3.4
     version: 2.3.6
   '@types/mdast':
-    specifier: ^3.0.10
-    version: 3.0.13
+    specifier: ^4.0.0
+    version: 4.0.1
   '@types/unist':
     specifier: ^2.0.6
     version: 2.0.8
@@ -377,6 +377,12 @@ packages:
     resolution: {integrity: sha512-HjiGiWedR0DVFkeNljpa6Lv4/IZU1+30VY5d747K7lBudFc3R0Ibr6yJ9lN3BE28VnZyDfLF/VB1Ql1ZIbKrmg==}
     dependencies:
       '@types/unist': 2.0.8
+
+  /@types/mdast@4.0.1:
+    resolution: {integrity: sha512-IlKct1rUTJ1T81d8OHzyop15kGv9A/ff7Gz7IJgrk6jDb4Udw77pCJ+vq8oxZf4Ghpm+616+i1s/LNg/Vh7d+g==}
+    dependencies:
+      '@types/unist': 2.0.8
+    dev: false
 
   /@types/ms@0.7.32:
     resolution: {integrity: sha512-xPSg0jm4mqgEkNhowKgZFBNtwoEwF6gJ4Dhww+GFpm3IgtNseHQZ5IqdNwnquZEoANxyDAKDRAdVo4Z72VvD/g==}

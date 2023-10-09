@@ -16,9 +16,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-      - run: npm install
-      - run: npm run --if-present build
-      - run: npm test
+      - run: pnpm install
+      - run: pnpm run --if-present build
+      - run: pnpm test
 
   publish-npm:
     needs: build
@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
-      - run: npm install
-      - run: npm publish
+      - run: pnpm install
+      - run: pnpm publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}

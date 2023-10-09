@@ -63,7 +63,7 @@ export const dt: Handle = (state, element) => {
  *
  * @public
  */
-export const dd: Handle = (state, element, parent) => {
+export const dd: Handle = (state, element, _parent) => {
   const children = state.toFlow(state.all(element));
   const spread = spreadout(element);
   const result = {

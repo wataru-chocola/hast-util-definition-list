@@ -330,6 +330,8 @@ test.each([
   });
   const md = mdastToMarkdown(mdast, {
     extensions: [defListToMarkdown],
+    fences: false,
+    listItemIndent: "tab",
   });
   expect(md).toBe(dedent(expected) + "\n");
 });

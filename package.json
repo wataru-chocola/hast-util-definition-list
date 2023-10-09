@@ -27,27 +27,22 @@
     "index.d.ts"
   ],
   "dependencies": {
-    "@types/hast": "^2.3.4",
-    "@types/mdast": "^3.0.10",
-    "@types/unist": "^2.0.6",
-    "hast-util-to-mdast": "^9.0.0",
-    "mdast-util-definition-list": "^1.4.0",
-    "mdast-util-phrasing": "^3.0.1"
+    "@types/hast": "^3.0.1",
+    "@types/mdast": "^4.0.1",
+    "@types/unist": "^3.0.0",
+    "hast-util-to-mdast": "^10.1.0",
+    "mdast-util-definition-list": "^2.0.0",
+    "mdast-util-phrasing": "^4.0.0"
   },
   "devDependencies": {
     "eslint": "8.49.0",
-    "hast-util-from-html": "1.0.2",
-    "mdast-util-to-markdown": "1.5.0",
+    "hast-util-from-html": "2.0.1",
+    "mdast-util-to-markdown": "2.1.0",
     "prettier": "2.8.8",
     "rimraf": "4.4.1",
     "ts-dedent": "2.2.0",
     "typescript": "5.0.4",
     "vitest": "0.34.4"
-  },
-  "overrides": {
-    "hast-util-to-html": {
-      "hast-util-raw": "^8.0.0"
-    }
   },
   "scripts": {
     "format": "prettier --write \"./**/*.{ts,json}\"",

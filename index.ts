@@ -87,7 +87,11 @@ function spreadout(element: Element) {
   return false;
 }
 
-const defListHastToMdast = {
+const defListHastToMdast: {
+  dl: Handle;
+  dt: Handle;
+  dd: Handle;
+} = {
   dl,
   dt,
   dd,

@@ -35,7 +35,7 @@
     "mdast-util-phrasing": "^4.1.0"
   },
   "devDependencies": {
-    "@types/node": "^20.11.19",
+    "@types/node": "20.11.19",
     "@typescript-eslint/eslint-plugin": "6.20.0",
     "@typescript-eslint/parser": "6.20.0",
     "eslint": "8.56.0",

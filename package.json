@@ -1,7 +1,7 @@
 {
   "packageManager": "pnpm@8.15.4",
   "name": "hast-util-definition-list",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "hast-util-to-mdast handlers for definition list",
   "license": "MIT",
   "author": "Wataru Watanabe",

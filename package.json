@@ -43,7 +43,7 @@
     "eslint-plugin-import": "2.29.1",
     "hast-util-from-html": "2.0.1",
     "mdast-util-to-markdown": "2.1.0",
-    "prettier": "3.2.5",
+    "prettier": "3.3.2",
     "rimraf": "5.0.7",
     "ts-dedent": "2.2.0",
     "typescript": "5.3.3",

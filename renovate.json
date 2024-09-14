@@ -1,10 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base", "config:js-lib"],
+  "extends": ["config:base", "config:js-lib", ":automergePatch"],
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
-      "extends": ["schedule:monthly"]
+      "extends": ["schedule:quarterly"]
+    },
+    {
+      "matchDepTypes": ["packageManager"],
+      "matchPackageNames": ["pnpm"],
+      "extends": ["schedule:quarterly"]
     }
   ]
 }

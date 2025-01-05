@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base", "config:js-lib", ":automergePatch"],
+  "extends": ["config:recommended", "config:js-lib", ":automergePatch", ":configMigration"],
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],

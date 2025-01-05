@@ -1,6 +1,6 @@
 import type { Handle } from "hast-util-to-mdast";
-import { Element, ElementContent } from "hast";
-import { PhrasingContent } from "mdast";
+import type { Element, ElementContent } from "hast";
+import type { PhrasingContent } from "mdast";
 import {
   DefList,
   DefListTerm,

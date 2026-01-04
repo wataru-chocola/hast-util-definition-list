@@ -35,9 +35,9 @@
     "mdast-util-phrasing": "^4.1.0"
   },
   "devDependencies": {
-    "@eslint/js": "9.36.0",
+    "@eslint/js": "9.39.2",
     "@types/node": "24.10.4",
-    "eslint": "9.36.0",
+    "eslint": "9.39.2",
     "eslint-import-resolver-typescript": "4.4.4",
     "eslint-plugin-import": "2.32.0",
     "hast-util-from-html": "2.0.3",

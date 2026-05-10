@@ -1,5 +1,5 @@
 {
-  "packageManager": "pnpm@10.26.2",
+  "packageManager": "pnpm@10.33.3",
   "name": "hast-util-definition-list",
   "version": "2.1.0",
   "description": "hast-util-to-mdast handlers for definition list",

@@ -8,9 +8,13 @@
       "extends": ["schedule:quarterly"]
     },
     {
-      "matchDepTypes": ["packageManager"],
       "matchPackageNames": ["pnpm"],
+      "groupName": "pnpm",
       "extends": ["schedule:quarterly"]
+    },
+    {
+      "matchPackageNames": ["oxlint", "oxlint-tsgolint", "oxfmt"],
+      "groupName": "oxc"
     }
   ]
 }

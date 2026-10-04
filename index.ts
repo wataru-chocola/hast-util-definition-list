@@ -1,17 +1,13 @@
-import type { Handle } from "hast-util-to-mdast";
-import type { Element, ElementContent } from "hast";
-import type { PhrasingContent } from "mdast";
-import {
-  DefList,
-  DefListTerm,
-  DefListDescription,
-} from "mdast-util-definition-list";
+import type { Handle } from 'hast-util-to-mdast';
+import type { Element, ElementContent } from 'hast';
+import type { PhrasingContent } from 'mdast';
+import { DefList, DefListTerm, DefListDescription } from 'mdast-util-definition-list';
 import type {
   DefListNode,
   DefListDescriptionNode,
   DefListTermNode,
-} from "mdast-util-definition-list";
-import { phrasing } from "mdast-util-phrasing";
+} from 'mdast-util-definition-list';
+import { phrasing } from 'mdast-util-phrasing';
 
 /**
  * dl element handler
@@ -22,7 +18,7 @@ export const dl: Handle = (state, element, _parent) => {
   // unwrap div
   // see: https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/dl.js
   const children = element.children.reduce((acc, child) => {
-    if (child.type === "element" && child.tagName === "div") {
+    if (child.type === 'element' && child.tagName === 'div') {
       return acc.concat(child.children);
     }
     return acc.concat([child]);
@@ -33,8 +29,7 @@ export const dl: Handle = (state, element, _parent) => {
     .flat()
     .filter(
       (node): node is DefListTermNode | DefListDescriptionNode =>
-        node != null &&
-        (node.type === "defListTerm" || node.type === "defListDescription")
+        node != null && (node.type === 'defListTerm' || node.type === 'defListDescription'),
     );
   const result = {
     type: DefList,
@@ -50,9 +45,7 @@ export const dl: Handle = (state, element, _parent) => {
  * @public
  */
 export const dt: Handle = (state, element) => {
-  const children = state
-    .all(element)
-    .filter((node): node is PhrasingContent => phrasing(node));
+  const children = state.all(element).filter((node): node is PhrasingContent => phrasing(node));
   const result = { type: DefListTerm, children } satisfies DefListTermNode;
   state.patch(element, result);
   return result;
@@ -77,10 +70,10 @@ export const dd: Handle = (state, element, _parent) => {
 
 function spreadout(element: Element) {
   for (const child of element.children) {
-    if (child.type !== "element") continue;
+    if (child.type !== 'element') continue;
 
     if (phrasing(child)) continue;
-    if (child.tagName === "p" || spreadout(child)) {
+    if (child.tagName === 'p' || spreadout(child)) {
       return true;
     }
   }

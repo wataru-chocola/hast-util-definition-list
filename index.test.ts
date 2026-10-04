@@ -1,16 +1,16 @@
-import { expect, test } from "vitest";
-import { defListHastToMdast } from "./index.js";
+import { expect, test } from 'vitest';
+import { defListHastToMdast } from './index.js';
 
-import { fromHtml as hastFromHtml } from "hast-util-from-html";
-import { toMarkdown as mdastToMarkdown } from "mdast-util-to-markdown";
-import { toMdast as hastToMdast } from "hast-util-to-mdast";
-import { defListToMarkdown } from "mdast-util-definition-list";
+import { fromHtml as hastFromHtml } from 'hast-util-from-html';
+import { toMarkdown as mdastToMarkdown } from 'mdast-util-to-markdown';
+import { toMdast as hastToMdast } from 'hast-util-to-mdast';
+import { defListToMarkdown } from 'mdast-util-definition-list';
 
-import { dedent } from "ts-dedent";
+import { dedent } from 'ts-dedent';
 
 test.each([
   {
-    title: "simple tight dl",
+    title: 'simple tight dl',
     html: `
     <p>This is paragraph.</p>
     <dl>
@@ -34,7 +34,7 @@ test.each([
     `,
   },
   {
-    title: "not preserve break-line in dd",
+    title: 'not preserve break-line in dd',
     html: `
     <dl>
     <dt>First Term</dt>
@@ -52,7 +52,7 @@ test.each([
     `,
   },
   {
-    title: "associate multiple terms to a definition",
+    title: 'associate multiple terms to a definition',
     html: `
     <dl>
     <dt>Term 1</dt>
@@ -71,7 +71,7 @@ test.each([
     `,
   },
   {
-    title: "definition term can be decorated",
+    title: 'definition term can be decorated',
     html: `
     <dl>
     <dt>A<strong>pp</strong>le</dt>
@@ -89,7 +89,7 @@ test.each([
     `,
   },
   {
-    title: "item list inside tight dd",
+    title: 'item list inside tight dd',
     html: `
     <dl>
     <dt>First Term</dt>
@@ -115,7 +115,7 @@ test.each([
     `,
   },
   {
-    title: "contains a loose (spread) definition",
+    title: 'contains a loose (spread) definition',
     html: `
     <dl>
     <dt>First Term</dt>
@@ -144,7 +144,7 @@ test.each([
     `,
   },
   {
-    title: "contains a loose (spread) definition",
+    title: 'contains a loose (spread) definition',
     html: `
     <dl>
     <dt>First Term</dt>
@@ -173,7 +173,7 @@ test.each([
     `,
   },
   {
-    title: "wrapped in div",
+    title: 'wrapped in div',
     html: `
     <dl>
       <div>
@@ -202,7 +202,7 @@ test.each([
     `,
   },
   {
-    title: "nested defList",
+    title: 'nested defList',
     html: `
     <dl>
     <dt>Term 1</dt>
@@ -242,7 +242,7 @@ test.each([
   },
 
   {
-    title: "code block inside dd",
+    title: 'code block inside dd',
     html: `
     <dl>
     <dt>Term</dt>
@@ -258,8 +258,7 @@ test.each([
     `,
   },
   {
-    title:
-      "defList can contain multiple paragraph and other block-level elements",
+    title: 'defList can contain multiple paragraph and other block-level elements',
     html: `
     <dl>
     <dt>Term 1</dt>
@@ -321,7 +320,7 @@ test.each([
     \\: Not Definition
     `,
   },
-])("html => md: $title", ({ html, expected }) => {
+])('html => md: $title', ({ html, expected }) => {
   const hast = hastFromHtml(dedent(html), { fragment: true });
   const mdast = hastToMdast(hast, {
     handlers: {
@@ -331,7 +330,7 @@ test.each([
   const md = mdastToMarkdown(mdast, {
     extensions: [defListToMarkdown],
     fences: false,
-    listItemIndent: "tab",
+    listItemIndent: 'tab',
   });
-  expect(md).toBe(dedent(expected) + "\n");
+  expect(md).toBe(dedent(expected) + '\n');
 });

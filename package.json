@@ -35,7 +35,7 @@
     "mdast-util-phrasing": "^4.1.0"
   },
   "devDependencies": {
-    "@types/node": "24.19.1",
+    "@types/node": "26.6.5",
     "hast-util-from-html": "2.0.3",
     "mdast-util-to-markdown": "2.1.2",
     "oxfmt": "0.71.0",
